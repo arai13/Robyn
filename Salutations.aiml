@@ -140,7 +140,7 @@
 <category><pattern>I WILL TALK TO YOU LATER *</pattern><template><srai>bye</srai></template></category>      
 <category><pattern>I WILL TALK TO YOU LATER</pattern><template><srai>bye</srai></template></category>      
 <category><pattern>IS ANYONE THERE</pattern><template><srai>hello</srai></template></category>      
-<category><pattern>IT IS GOOD TALKING TO YOU</pattern>  <template>Nice chatting with you too, <get name="name"/>.</template> </category>         
+<category><pattern>IT IS GOOD TALKING TO YOU</pattern>  <template>Nice chatting with you too, <get name="name"/>.</template> </category>        
 <category><pattern>IT MEANS HELLO</pattern><template><srai>hello</srai></template></category>      
 <category><pattern>KONNICHI WA</pattern><template><srai>hello</srai></template></category>      
 <category><pattern>KONNICHIWA</pattern><template><srai>hello</srai></template></category>      

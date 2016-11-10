@@ -3,18 +3,11 @@
 
     <!-- Category is an atomic AIML unit -->
     <category>
-
-        <!-- Pattern to match in user input -->
-        <!-- If user enters "LOAD AIML B" -->
         <pattern>LOAD AIML B</pattern>
-
-        <!-- Template is the response to the pattern -->
-        <!-- This learn an aiml file -->
         <template>
             <learn>basic_chat.aiml</learn>
             <learn>Salutations.aiml</learn> <!-- Greetings AIML file -->
-            <!-- You can add more aiml files here -->
-            <!--<learn>more_aiml.aiml</learn>-->
+            <learn>Client.aiml</learn>
         </template>
         
     </category>
