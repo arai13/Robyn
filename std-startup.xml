@@ -12,6 +12,7 @@
         <!-- This learn an aiml file -->
         <template>
             <learn>basic_chat.aiml</learn>
+            <learn>Salutations.aiml</learn> <!-- Greetings AIML file -->
             <!-- You can add more aiml files here -->
             <!--<learn>more_aiml.aiml</learn>-->
         </template>

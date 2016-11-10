@@ -27,6 +27,5 @@ while True:
 		response = response[1:]
 		cursor.execute(response)
 		temp = cursor.fetchone()
-		print(temp[0])
-	else:
-		print(response)
+		response = temp[0]
+	print(response)
