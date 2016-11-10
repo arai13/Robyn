@@ -1,0 +1,25 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+
+    
+    <category>
+        <pattern>WHERE SHOULD I EMAIL ASH</pattern>
+        <template>
+            !SELECT email FROM people WHERE name="Ash"
+        </template>
+    </category>
+</aiml>
