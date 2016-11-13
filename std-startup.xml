@@ -8,6 +8,7 @@
             <learn>basic_chat.aiml</learn>
             <learn>Salutations.aiml</learn> <!-- Greetings AIML file -->
             <learn>Client.aiml</learn>
+            <learn>diseases_conv.aiml</learn>
         </template>
         
     </category>
