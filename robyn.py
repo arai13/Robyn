@@ -4,7 +4,7 @@ import sqlite3
 # The Kernel object is the public interface to
 # the AIML interpreter.
 k = aiml.Kernel()
-db = sqlite3.connect('diseases.db')
+db = sqlite3.connect('db/diseases.db')
 
 cursor = db.cursor()
 

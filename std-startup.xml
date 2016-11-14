@@ -5,10 +5,10 @@
     <category>
         <pattern>LOAD AIML B</pattern>
         <template>
-            <learn>basic_chat.aiml</learn>
-            <learn>Salutations.aiml</learn> <!-- Greetings AIML file -->
-            <learn>Client.aiml</learn>
-            <learn>diseases_conv.aiml</learn>
+            <learn>aiml/basic_chat.aiml</learn>
+            <learn>aiml/Salutations.aiml</learn> <!-- Greetings AIML file -->
+            <learn>aiml/Client.aiml</learn>
+            <learn>aiml/diseases_conv.aiml</learn>
         </template>
         
     </category>

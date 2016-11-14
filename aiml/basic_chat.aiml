@@ -1,0 +1,44 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+    
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            My name is Robyn and I can talk to you about medical health!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template>
+            <srai>what are you</srai>
+        </template>
+    </category>
+
+    <category> <!-- Default case -->
+        <pattern>*</pattern>
+        <template>I'm sorry I have no answer for that.</template>
+    </category>
+
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>
+            Thanks for asking. I'm good, how about you?
+        </template>
+    </category>
+	
+	<category>
+        <pattern>I'M GOOD</pattern>
+        <template>
+            Good to hear that!
+        </template>
+    </category>
+	
+	<category>
+        <pattern>I'M WELL</pattern>
+        <template>
+            <srai>I'M GOOD</srai>
+        </template>
+    </category>
+	
+</aiml>
