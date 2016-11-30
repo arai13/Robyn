@@ -2,7 +2,7 @@
 <!-- basic_chat.aiml -->
     
     <category>
-        <pattern>WHAT ARE YOU</pattern>
+        <pattern>WHO ARE YOU</pattern>
         <template>
             My name is Robyn and I can talk to you about medical health!
         </template>

@@ -1,5 +1,6 @@
 import aiml
 import sqlite3
+from bottle import get, post, run, request
 
 # The Kernel object is the public interface to
 # the AIML interpreter.
@@ -18,14 +19,40 @@ k.learn("std-startup.xml")
 # we ignore.
 k.respond("load aiml b")
 
+@get('/')
+def ask():
+    return '''
+        <form action="/" method="post">
+                <input name="user_input" type="float" />
+                <input value="Enter" type="submit" />
+        </form>
+    '''
 
-# Loop forever, reading user input from the command
-# line and printing responses.
-while True: 
-	response = k.respond(str(input("> ")))
-	if response[0] == '!':
-		response = response[1:]
-		cursor.execute(response)
-		temp = cursor.fetchone()
-		response = temp[0]
-	print(response)
+conversation = ""
+
+@post('/')
+def robyn_responds():
+    user_input = request.forms.get('user_input')
+
+    response = k.respond(user_input)
+    if response[0] == '!':
+        response = response[1:]
+        cursor.execute(response)
+        temp = cursor.fetchone()
+        response = temp[0]
+    
+    global conversation
+    current_user_conv = "<b>You: </b>" + user_input
+    current_robyn_conv = "<b>Robyn: </b>" + response 
+    conversation = conversation + current_user_conv + "<br>" + current_robyn_conv + "<br>"
+
+    return '''
+        <p>%s</p>
+
+        <form action="/" method="post">
+                <input name="user_input" type="float" />
+                <input value="Enter" type="submit" />
+        </form>
+    ''' % (conversation)
+
+run(host='localhost', port=8080, debug=True)
