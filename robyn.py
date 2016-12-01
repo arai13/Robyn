@@ -32,7 +32,7 @@ def ask():
     <style type="text/css">
         body, html{{
             margin:0;
-        padding:0;
+            padding:0;
         }}
     </style>
 </head>
@@ -108,8 +108,8 @@ def robyn_responds():
 
     <div style="margin-left: auto; margin-right: auto; width: 90%; height: 27em; background: #669999; margin-bottom: 2em; border-radius: 6px;">
         <h3 style="margin-left: 1em; padding-top: 0.5em; font-family: 'Ubuntu', sans-serif;">Conversation</h3>
-        <div style="width: 98%; margin-left: auto; margin-right: auto; height: 23em; background: white; overflow: auto;">
-            <p>
+        <div id="conv_box" style="width: 98%; margin-left: auto; margin-right: auto; height: 23em; background: white; overflow: auto; padding-left: 1em;">
+            <p style="font-family: 'Ubuntu', sans-serif;"">
             {0}
             </p>
         </div>
@@ -127,6 +127,8 @@ def robyn_responds():
     text_input.focus ();
     text_input.select ();
     }}
+    var objDiv = document.getElementById("conv_box");
+    objDiv.scrollTop = objDiv.scrollHeight;
     </script>
 </body>
 </html>    
