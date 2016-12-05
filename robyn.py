@@ -36,14 +36,14 @@ def ask():
         }}
     </style>
 </head>
-<body bgcolor="#CCD1D9">
+<body bgcolor="#CCD1D9" style="margin: 0;">
     <div style="width: 100%; height: 6em; background: #212121;">
         <p style="font-family: 'Pacifico', cursive; color: white; font-size: 3em; margin: 0; padding-left: 1em;">Robyn: Your Friend for Medical Health!</p>
     </div>
 
     <div style="margin-left: auto; margin-right: auto; width: 90%; height: 27em; background: #669999; margin-bottom: 2em; border-radius: 6px;">
         <h3 style="margin-left: 1em; padding-top: 0.5em; font-family: 'Ubuntu', sans-serif;">Conversation</h3>
-        <div style="width: 98%; margin-left: auto; margin-right: auto; height: 23em; background: white; overflow: auto;">
+        <div style="width: 99%; margin-left: auto; margin-right: auto; height: 23em; background: white; overflow: auto;">
             <p>
 
             </p>

@@ -1,39 +1,662 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <aiml version="1.0.1" encoding="UTF-8">
-<!-- basic_chat.aiml -->
 
+<!-- SYMPTOMS -->
     <category>
         <pattern>WHAT ARE THE SYMPTOMS OF *</pattern>
         <template>
-            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<lowercase><star/></lowercase>')) AND (fact = 'Symptoms and Signs');   
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<lowercase><star index = "1"/></lowercase>')) AND (fact = 'Symptoms and Signs');   
+            <think><set name = "current_disease"><lowercase><star index = "1"/></lowercase></set></think>
         </template>
     </category>
 
     <category>
-        <pattern>WHAT ARE THE CAUSES OF *</pattern>
+        <pattern>WHAT IS THE SYMPTOM OF *</pattern>
         <template>
-            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<star/>')) AND (fact = 'Causes');   
+            <srai>WHAT ARE THE SYMPTOMS OF <star/></srai>
         </template>
     </category>
+
+    <category>
+        <pattern>WHAT IS THE SYMPTOMS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE SYMPTOMS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE SYMPTOM OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE SYMPTOMS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE SYMPTOM OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS OF <star/></srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT ARE THE SYMPTOMS</pattern>
+        <template>
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<get name = "current_disease"/>')) AND (fact = 'Symptoms and Signs');   
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE SYMPTOM</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE SYMPTOMS</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT IS ITS SYMPTOMS</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS ITS SYMPTOM</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE SIGNS</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE SIGNS</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT IS ITS SIGNS</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS ITS SIGN</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE SYMPTOMS</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE SYMPTOM</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE SYMPTOMS</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE SYMPTOM</pattern>
+        <template>
+            <srai>WHAT ARE THE SYMPTOMS</srai>
+        </template>
+    </category>
+
+
+<!-- CAUSES -->
+    <category>
+        <pattern>WHAT ARE THE CAUSES OF *</pattern>
+        <template>
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<star index = "1"/>')) AND (fact = 'Causes');
+            <think><set name = "current_disease"><lowercase><star index = "1"/></lowercase></set></think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE CAUSE OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT CAUSES *</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE CAUSES OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE CAUSES OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE CAUSE OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE CAUSE OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE CAUSES OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES OF <star/></srai>
+        </template>
+    </category>
+
+
+
+
+    <category>
+        <pattern>WHAT ARE THE CAUSES</pattern>
+        <template>
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<get name = "current_disease"/>')) AND (fact = 'Causes');   
+        </template>
+    </category>
+
+        <category>
+        <pattern>WHAT IS THE CAUSES</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE CAUSE</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT IS ITS CAUSES</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS ITS CAUSE</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT CAUSES IT</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT MIGHT CAUSE IT</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE CAUSES</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE CAUSE</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE CAUSE</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE CAUSES</pattern>
+        <template>
+            <srai>WHAT ARE THE CAUSES</srai>
+        </template>
+    </category>    
+
+<!-- TREATMENT -->
 
     <category>
         <pattern>WHAT ARE THE TREATMENTS OF *</pattern>
         <template>
-            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<star/>')) AND (fact = 'Treatment');   
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<star index = "1"/>')) AND (fact = 'Treatment');
+            <think><set name = "current_disease"><lowercase><star index = "1"/></lowercase></set></think>
         </template>
     </category>
+
+    <category>
+        <pattern>WHAT IS THE TREATMENT OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW TO TREAT *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW CAN I TREAT *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW TO CURE *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW CAN I CURE *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE TREATMENTS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE TREATMENT OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE CURE OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE CURES OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE TREATMENTS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE TREATMENT OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS OF <star/></srai>
+        </template>
+    </category>
+
+
+
+
+    <category>
+        <pattern>WHAT ARE THE TREATMENTS</pattern>
+        <template>
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<get name = "current_disease"/>')) AND (fact = 'Treatment');   
+        </template>
+    </category>
+
+        <category>
+        <pattern>WHAT IS THE TREATMENTS</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE TREATMENT</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT IS ITS TREATMENTS</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS ITS TREATMENT</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW DO I TREAT IT?</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW DO I CURE IT?</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE TREATMENTS</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE TREATMENT</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE TREATMENTS</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE TREATMENT</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>    
+
+<!-- DIAGNOSIS -->
 
     <category>
         <pattern>WHAT ARE THE DIAGNOSIS OF *</pattern>
         <template>
-            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<lowercase><star/></lowercase>')) AND (fact = 'Diagnosis');   
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<lowercase><star index = "1"/></lowercase>')) AND (fact = 'Diagnosis'); 
+        <think><set name = "current_disease"><lowercase><star index = "1"/></lowercase></set></think>  
         </template>
     </category>
 
     <category>
+        <pattern>WHAT IS THE DIAGNOSIS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW TO DIAGNOSE *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW CAN I DIAGNOSE *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW TO KNOW IF I HAVE *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW CAN I TELL IF I HAVE *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE DIAGNOSIS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE DIAGNOSES OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSES OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE DIAGNOSIS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE DIAGNOSES OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE DIAGNOSIS OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE DIAGNOSES OF *</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS OF <star/></srai>
+        </template>
+    </category>
+
+
+
+
+    <category>
+        <pattern>WHAT ARE THE DIAGNOSIS</pattern>
+        <template>
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<get name = "current_disease"/>')) AND (fact = 'Diagnosis');   
+        </template>
+    </category>
+
+        <category>
+        <pattern>WHAT IS THE DIAGNOSIS</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE DIAGNOSES</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT IS ITS DIAGNOSIS</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS ITS DIAGNOSES</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW DO I DIAGNOSE IT?</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW DO I KNOW IF I HAVE IT?</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE DIAGNOSIS</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>LIST THE DIAGNOSES</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE DIAGNOSIS</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME THE DIAGNOSES</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>  
+
+    <category>
+        <pattern>HOW CAN I DIAGNOSE IT</pattern>
+        <template>
+            <srai>WHAT ARE THE DIAGNOSIS</srai>
+        </template>
+    </category>     
+
+<!-- DEFINITION -->
+
+    <category>
         <pattern>WHAT IS *</pattern>
         <template>
-            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<star/>')) AND (fact = 'Definition');   
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<star index = "1"/>')) AND (fact = 'Definition'); 
+        <think><set name = "current_disease"><lowercase><star index = "1"/></lowercase></set></think> 
+        </template>
+    </category>
+
+    <category>
+        <pattern>TELL ME ABOUT *</pattern>
+        <template>
+            <srai>WHAT IS <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE DESCRIPTION</pattern>
+        <template>
+            !SELECT description FROM facts WHERE (id = (SELECT id FROM disease WHERE name='<get name = "current_disease"/>')) AND (fact = 'Definition');   
+        </template>
+    </category>
+
+    <category>
+        <pattern>DESCRIBE IT MORE</pattern>
+        <template>
+            <srai>WHAT IS THE DESCRIPTION</srai>
         </template>
     </category>
 

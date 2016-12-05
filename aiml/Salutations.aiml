@@ -97,6 +97,7 @@
 <category><pattern>HELLOW</pattern><template>   <srai>hello</srai>    </template></category>      
 <category><pattern>HELO</pattern><template>   <srai>hello</srai>    </template></category>      
 <category><pattern>HELOO *</pattern><template><srai>hello <star/></srai></template></category>    
+<category><pattern>HEY</pattern><template>   <srai>hello</srai>    </template></category> 
 <category><pattern>HEY THERE</pattern><template>   <srai>hello</srai>    </template></category>      
 <category><pattern>HI</pattern><template>   <sr/>     <srai>hello</srai>    </template></category>  
 <category><pattern>HI THERE *</pattern><template>   <sr/>     <srai>hello</srai>    </template></category>     
