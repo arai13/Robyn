@@ -28,16 +28,23 @@
     </category>
 	
 	<category>
-        <pattern>I'M GOOD</pattern>
+        <pattern>IM GOOD</pattern>
         <template>
             Good to hear that!
         </template>
     </category>
 	
 	<category>
-        <pattern>I'M WELL</pattern>
+        <pattern>IM WELL</pattern>
         <template>
-            <srai>I'M GOOD</srai>
+            <srai>IM GOOD</srai>
+        </template>
+    </category>
+	
+	<category>
+        <pattern>THANK YOU</pattern>
+        <template>
+            No problem at all!
         </template>
     </category>
 	

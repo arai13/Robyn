@@ -383,7 +383,7 @@
         </template>
     </category>
 
-        <category>
+    <category>
         <pattern>WHAT IS THE TREATMENTS</pattern>
         <template>
             <srai>WHAT ARE THE TREATMENTS</srai>
@@ -413,14 +413,21 @@
     </category>
 
     <category>
-        <pattern>HOW DO I TREAT IT?</pattern>
+        <pattern>HOW DO I TREAT IT</pattern>
         <template>
             <srai>WHAT ARE THE TREATMENTS</srai>
         </template>
     </category>
 
     <category>
-        <pattern>HOW DO I CURE IT?</pattern>
+        <pattern>HOW CAN I TREAT IT</pattern>
+        <template>
+            <srai>WHAT ARE THE TREATMENTS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW DO I CURE IT</pattern>
         <template>
             <srai>WHAT ARE THE TREATMENTS</srai>
         </template>
