@@ -1,3 +1,7 @@
+# Author: Ashutosh Rai
+# File: robyn.py
+# Description: Main handler for Robyn. Also contains the HTML/CSS/JS code for Robyn's web interface.
+
 import aiml
 import sqlite3
 from bottle import get, post, run, request
@@ -19,8 +23,8 @@ k.learn("std-startup.xml")
 # we ignore.
 k.respond("load aiml b")
 
-@get('/')
-def ask():
+@get('/') # provide the initial landing page and grab the user input
+def ask(): # HTML/CSS/JS code for the interface
     return '''
 <!DOCTYPE html>
 <html>
@@ -70,7 +74,7 @@ def ask():
 
 conversation = ""
 
-@post('/')
+@post('/') # to run the query against the DB and return the response to the user
 def robyn_responds():
     user_input = request.forms.get('user_input')
 
