@@ -2,9 +2,12 @@
 # File: robyn.py
 # Description: Main handler for Robyn. Also contains the HTML/CSS/JS code for Robyn's web interface.
 
-import aiml
 import sqlite3
 from bottle import get, post, run, request
+
+import sys
+sys.path.append('./Py3kAiml-master') #to import the aiml module
+import aiml
 
 # The Kernel object is the public interface to
 # the AIML interpreter.

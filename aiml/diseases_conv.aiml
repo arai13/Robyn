@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!-- 
     Author: Ashutosh Rai
     File: diseases_conv.aiml
     Description: AIML code to handle the questions from the user
 -->
 
-<?xml version="1.0" encoding="ISO-8859-1"?>
 <aiml version="1.0.1" encoding="UTF-8">
 
 <!-- SYMPTOMS -->
