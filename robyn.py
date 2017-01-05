@@ -86,7 +86,10 @@ def robyn_responds():
         response = response[1:]
         cursor.execute(response)
         temp = cursor.fetchone()
-        response = temp[0]
+        if temp:
+            response = temp[0]
+        else:
+            response = "I'm not sure about that. You could maybe ask a related question!"
     
     global conversation
     current_user_conv = "<b>You: </b>" + user_input

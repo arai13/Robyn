@@ -5,6 +5,7 @@
     <category>
         <pattern>LOAD AIML B</pattern>
         <template>
+	    <learn>Py3kAiml-master/standard/std-*.aiml</learn>
             <learn>aiml/basic_chat.aiml</learn>
             <learn>aiml/Salutations.aiml</learn> <!-- Greetings AIML file -->
             <learn>aiml/Client.aiml</learn>
