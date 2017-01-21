@@ -88,13 +88,13 @@ def robyn_responds():
         temp = cursor.fetchone()
         if temp:
             response = temp[0]
-        else:
-            response = "I'm not sure about that. You could maybe ask a related question!"
+        else: #If the query does not return anything from the database
+            response = "I'm not sure about that. You could maybe ask a related question!" 
     
     global conversation
     current_user_conv = "<b>You: </b>" + user_input
     current_robyn_conv = "<b>Robyn: </b>" + response 
-    conversation = conversation + current_user_conv + "<br>" + current_robyn_conv + "<br>"
+    conversation = conversation + current_user_conv + "<br>" + current_robyn_conv + "<br>" #appending to the text in the chatbox
 
     return '''
 <!DOCTYPE html>

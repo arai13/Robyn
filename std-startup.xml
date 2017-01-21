@@ -1,11 +1,15 @@
 <aiml version="1.0.1" encoding="UTF-8">
-    <!-- std-startup.xml -->
+    <!-- 
+        Author: Ashutosh Rai
+        File: std-startup.xml
+        Description: Collection of aiml files that will be accessible to Robyn
+    -->
 
     <!-- Category is an atomic AIML unit -->
     <category>
         <pattern>LOAD AIML B</pattern>
         <template>
-	    <learn>Py3kAiml-master/standard/std-*.aiml</learn>
+	    <learn>Py3kAiml-master/standard/std-*.aiml</learn> <!-- Files collected from other sources -->
             <learn>aiml/basic_chat.aiml</learn>
             <learn>aiml/Salutations.aiml</learn> <!-- Greetings AIML file -->
             <learn>aiml/Client.aiml</learn>

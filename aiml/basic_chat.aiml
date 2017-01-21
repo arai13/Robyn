@@ -1,5 +1,10 @@
 <aiml version="1.0.1" encoding="UTF-8">
-<!-- basic_chat.aiml -->
+
+<!-- 
+    Author: Ashutosh Rai
+    File: basic_chat.aiml
+    Description: First AIML code used to learn AIML. AIML code to handle the basic questions.
+-->
     
     <category>
         <pattern>WHAT ARE YOU</pattern>
